@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Create New Person</title>
+</head>
+<body>
+<h1>Create New Person</h1>
+<form action="#" th:action="@{/persons/create}" th:object="${person}" method="post">
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" th:field="*{person.firstName}"/>
+  <br/>
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" th:field="*{person.lastName}"/>
+  <br/>
+  <label for="phoneNumber">Phone Number:</label>
+  <input type="text" id="phoneNumber" th:field="*{person.phoneNumber}"/>
+  <br/>
+  <label for="email">Email:</label>
+  <input type="email" id="email" th:field="*{person.email}"/>
+  <br/>
+  <label for="userId">User ID:</label>
+  <input type="text" id="userId" th:field="*{person.userId}"/>
+  <br/>
+  <label for="photoUrl">Photo URL:</label>
+  <input type="text" id="photoUrl" th:field="*{person.photoUrl}"/>
+  <br/>
+  <label for="description">Description:</label>
+  <textarea id="description" th:field="*{person.description}"></textarea>
+  <br/>
+  <button type="submit">Save</button>
+</form>
+<a href="/persons">Back to List</a>
+</body>
+</html>

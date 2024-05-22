@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Article Created</title>
+</head>
+<body>
+<h1>Article Created Successfully</h1>
+<p>Title: <span th:text="${article.title}"></span></p>
+<p>Content: <span th:text="${article.content}"></span></p>
+<p>Article Number: <span th:text="${article.articleNumber}"></span></p>
+<a href="/articles">Back to Articles List</a>
+<a href="/articles/new">Create Another Article</a>
+</body>
+</html>
